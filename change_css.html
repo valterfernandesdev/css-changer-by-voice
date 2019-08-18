@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Changing CSS style by voice recognition using JavaScript</title>
+    <meta name="description" content="Changing CSS style by voice recognition using JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/outlined-btn.css">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Simple voice recognition</a>
+        <hr></hr>
+        <a href="change_css.html">Changing CSS style by voice recognition</a>
+    </div>
+
+    <div id="main">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" style="color: #663399">
+                        <span style="cursor:pointer" onclick="openNav()">☰ Changing CSS style by voice recognition</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div id="outer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="" id="app">
+                            <h3>Press Start, allow your microphone then start speaking!</h3>
+                            <div class="form-group">
+                                <textarea id="textbox" cols="15" rows="15" class="form-control" readonly></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <button id="pause-btn" title="Pause" class="btn warning btn-block" disabled>
+                        <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
+                        Pause
+                    </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button id="start-btn" title="Start" class="btn success btn-block">
+                        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                        Start
+                    </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a class="navbar-brand" style="color: #663399; padding: 15px 0px;" data-toggle="modal" href="#command_list">Command list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="command_list" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color: #663399;">Command List</h4>
+                </div>
+                <div class="modal-body">
+
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="javascript/libs/jquery/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="javascript/sidebar.js"></script>
+    <script src="javascript/index.js"></script>
+</body>
+
+</html>
