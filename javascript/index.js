@@ -3,7 +3,6 @@ var SpeechRecognition = window.webkitSpeechRecognition;
 var recognition = new SpeechRecognition();
 
 var Textbox = $('#textbox');
-
 var startBtn = document.getElementById('start-btn');
 var pauseBtn = document.getElementById('pause-btn');
 
@@ -13,9 +12,24 @@ recognition.continuous = true;
 
 recognition.onresult = function(event) {
     var current = event.resultIndex;
-    console.log('current', current);
     var transcript = event.results[current][0].transcript;
-    console.log('transcript', transcript);
+
+    if (transcript == "change body to Blue") {
+        console.log('transcript', transcript);
+        document.body.style.backgroundColor = "Blue";
+    }
+    if (transcript == "change title to White") {
+        console.log('transcript', transcript);
+        document.getElementById('titleapp').style.color = "White";
+    }
+    if (transcript == "open menu") {
+        console.log('transcript', transcript);
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+    if (transcript == "Change menu color to Black") {
+        console.log('transcript', transcript);
+        document.getElementById("mySidenav").style.backgroundColor = "Black";
+    }
 
     Content += transcript;
     Textbox.val(Content);
